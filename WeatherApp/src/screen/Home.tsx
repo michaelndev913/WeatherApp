@@ -1,5 +1,5 @@
-import React, { FC, useContext, useState, useEffect, useCallback } from 'react';
-import { View, Text, TextInput, StyleSheet, ScrollView, TouchableOpacity, Image, Keyboard, ActivityIndicator } from 'react-native';
+import React, { FC, useContext, useState } from 'react';
+import { View, Text, TextInput, StyleSheet, Image, Keyboard, ActivityIndicator } from 'react-native';
 import { WeatherContext } from '../context/WeatherProvider';
 import { getLocations } from '../api';
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
@@ -86,7 +86,6 @@ const Home:FC = () => {
                 <DaysWeatherList weathers={weatherData?.forecast?.forecastday} />
             </View>
             }
-            
         </View>
     );
 }
@@ -150,7 +149,6 @@ const styles = StyleSheet.create({
     error: {
         color: 'red',
         fontSize: 20,
-        // marginBottom: 10,
     },
 });
 
