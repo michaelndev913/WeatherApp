@@ -149,6 +149,7 @@ const styles = StyleSheet.create({
     error: {
         color: 'red',
         fontSize: 20,
+        textAlign: 'center',
     },
 });
 
