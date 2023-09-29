@@ -13,7 +13,8 @@ const DaysWeatherList = (props: LocationsListProps) => {
         <View style={styles.container}>
             {weathers?.map((item: any,index: number)=>{
                 const date = new Date(item.date);
-                let dayName = date.toLocaleDateString('en-US', { weekday: 'long' });
+                var minutes = date.getTimezoneOffset();
+                let dayName = new Date(date.getTime() + minutes*60000).toLocaleDateString('en-US', { weekday: 'long' });
                 dayName = dayName.split(',')[0];
 
                 return (
